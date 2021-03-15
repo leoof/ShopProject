@@ -1,0 +1,5 @@
+## Tasks to do ##
+
+> Build framework for main window
+> Build the database(s)
+> Organise and structure the project
