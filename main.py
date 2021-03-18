@@ -36,14 +36,14 @@ class MainClass:
 
     # An verification function
     def verification(self):
+        global root
+            
         if self.E1.get() == self.username:
             if self.E2.get() == self.password:
                 self.L3 = Label(root, text="Login successful, welcome!")
                 self.L3.pack(side=BOTTOM)
-                self.verified = 1
-                
-                global root
-                
+                self.verified = 1                
+ 
                 root.quit()
                 root1 = Tk()
                 root1.title("Shop")
