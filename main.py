@@ -3,6 +3,9 @@ import tkinter
 from tkinter import *
 from homeScreen import HomeScreen
 
+global root
+root = Tk()
+
 
 # A class that will be used to setup the calculator functions
 class MainClass:
@@ -12,7 +15,9 @@ class MainClass:
         self.password = "password"
         self.app = app
 
-        self.l1 = Label(root, text="BREAD BANK - WE SELL BREAD, WE SELL LOAFS", font=('Helvetica', 9, 'bold'))
+        self.l1 = Label(root,
+                        text="BREAD BANK - WE SELL BREAD, WE SELL LOAFS",
+                        font=('Helvetica', 9, 'bold'))
         self.l1.pack()
         self.N1 = Label(root, text="Username")
         self.N1.pack()
@@ -20,13 +25,15 @@ class MainClass:
         self.E1.pack()
         self.L2 = Label(root, text="Password")
         self.L2.pack()
-        self.E2 = Entry(root, width=30)
+        self.E2 = Entry(root, width=30, show="•")
         self.E2.pack()
         self.L3 = Label(root, text=" ")
 
         # Buttons that launch the commands
-        self.B1 = Button(root, text="Login", command=self.verification, font=('Comic Sans MS', 16)).pack(
-            side=tkinter.BOTTOM)
+        self.B1 = Button(root,
+                         text="Login",
+                         command=self.verification,
+                         font=('Comic Sans MS', 16)).pack(side=tkinter.BOTTOM)
 
     # An verification function
     def verification(self):
@@ -35,11 +42,13 @@ class MainClass:
                 self.L3 = Label(root, text="Login successful, welcome!")
                 self.L3.pack(side=BOTTOM)
                 self.verified = 1
+                root.quit()
                 root1 = Tk()
                 root1.title("Shop")
-                root1.geometry("700x450")
+                root1.geometry("350x275")
                 app1 = HomeScreen(root1)
                 root.mainloop()
+                
             else:
                 self.L3.config(text="Username or password is incorrect.")
                 self.L3.pack(side=BOTTOM)

@@ -1,0 +1,3 @@
+language = "python3"
+run = "python main.py"
+onBoot = "echo Machine has booted succesfully."
