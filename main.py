@@ -3,7 +3,6 @@ import tkinter
 from tkinter import *
 from homeScreen import HomeScreen
 
-global root
 root = Tk()
 
 
@@ -42,6 +41,9 @@ class MainClass:
                 self.L3 = Label(root, text="Login successful, welcome!")
                 self.L3.pack(side=BOTTOM)
                 self.verified = 1
+                
+                global root
+                
                 root.quit()
                 root1 = Tk()
                 root1.title("Shop")
@@ -58,7 +60,6 @@ class MainClass:
 
 
 if __name__ == "__main__":  # The loop that creates the windows and keeps it running
-    root = Tk()
     root.title("Shop")
     root.geometry("350x275")
     app = MainClass(root)
