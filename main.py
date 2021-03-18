@@ -3,9 +3,6 @@ import tkinter
 from tkinter import *
 from homeScreen import HomeScreen
 
-root = Tk()
-
-
 # A class that will be used to setup the calculator functions
 class MainClass:
     def __init__(self, app):
@@ -36,18 +33,20 @@ class MainClass:
 
     # An verification function
     def verification(self):
-        global root
+        
             
         if self.E1.get() == self.username:
+            global root
             if self.E2.get() == self.password:
                 self.L3 = Label(root, text="Login successful, welcome!")
                 self.L3.pack(side=BOTTOM)
                 self.verified = 1                
  
-                root.quit()
+                root.destroy()
+
                 root1 = Tk()
                 root1.title("Shop")
-                root1.geometry("350x275")
+                root1.geometry("450x275")
                 app1 = HomeScreen(root1)
                 root1.mainloop()
                 
@@ -58,9 +57,11 @@ class MainClass:
             self.L3.config(text="Username or password is incorrect.")
             self.L3.pack(side=BOTTOM)
 
+root = Tk()
 
 if __name__ == "__main__":  # The loop that creates the windows and keeps it running
     root.title("Shop")
     root.geometry("350x275")
     app = MainClass(root)
     root.mainloop()
+
