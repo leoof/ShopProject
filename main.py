@@ -49,7 +49,7 @@ class MainClass:
                 root1.title("Shop")
                 root1.geometry("350x275")
                 app1 = HomeScreen(root1)
-                root.mainloop()
+                root1.mainloop()
                 
             else:
                 self.L3.config(text="Username or password is incorrect.")
