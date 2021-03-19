@@ -8,7 +8,7 @@ class HomeScreen:
 
     self.label = Label(self.app, text="BREAD BANK - WE SELL BREAD, WE SELL LOAFS",font=('Arial'))
     self.label.pack()
-    B1 = Button(self.app, text="Login", command=self.login)
+    self.B1 = Button(self.app, text="Login", command=self.login)
     self.B1.pack()
 
   def login():
