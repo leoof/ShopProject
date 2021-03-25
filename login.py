@@ -10,8 +10,8 @@ class LoginApp:
         self.app = app
 
         self.l1 = Label(self.app,
-                        text="BREAD BANK - WE SELL BREAD, WE SELL LOAFS",
-                        font=('Helvetica', 9, 'bold'))
+                        text="BREAD BROTHER LOGIN TO BUY SOME BREAD BROTHER",
+                        font=('Helvetica', 15, 'bold'))
         self.l1.pack()
         self.N1 = Label(self.app, text="Username")
         self.N1.pack()
@@ -33,18 +33,18 @@ class LoginApp:
     def verification(self):           
         if self.E1.get() == self.username:
             if self.E2.get() == self.password:
-                self.L3 = Label(self.app, text="Login successful, welcome!")
+                self.L3 = Label(self.app, text="WELCOME BREAD BROTHER")
                 self.L3.pack(side=BOTTOM)              
                 self.app.destroy()
                 self.app1 = Tk()
                 self.app1.title("Shop")
-                self.app1.geometry("450x275")
+                self.app1.geometry("775x400")
                 app1 = HomeScreen(self.app1)
                 self.app1.mainloop()
                 
             else:
-                self.L3.config(text="Username or password is incorrect.")
+                self.L3.config(text="YOU ARE NOT A BREAD BROTHER LEAVE BROTHER NOW BROTHER")
                 self.L3.pack(side=BOTTOM)
         else:
-            self.L3.config(text="Username or password is incorrect.")
+            self.L3.config(text="YOU ARE NOT A BREAD BROTHER LEAVE BROTHER NOW BROTHER")
             self.L3.pack(side=BOTTOM)

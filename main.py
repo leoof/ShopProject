@@ -19,15 +19,12 @@ class HomeScreen:
       self.app.destroy()
       root1 = Tk()
       root1.title("Shop")
-      root1.geometry("775x420")
+      root1.geometry("750x350")
       app1 = LoginApp(root1)
       root1.mainloop()
 
-    def startShop(
-      
-JJ = bad
-print(JJ)
-
+    def startShop(self):
+      pass
 
 
 if __name__ == "__main__":  # The loop that creates the windows and keeps it running
