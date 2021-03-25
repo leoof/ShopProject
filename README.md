@@ -6,12 +6,4 @@
 * With credit to TT, BN, JP and the rest of our fantastic team. 👍
 * Any questions, feel free to message me. ❓
 
-
-* That's why yo mama dead.
-* Dead as hell.
-* What shoes she got on?
-* What shoes she got on in her casket?
-* That's why your granny aint have no knees.
-* She can't pray to jesus.
-
 ### Thanks, the Shop Project team.
